@@ -1,0 +1,44 @@
+module thirtyTwoBitAlu(reg1,reg2,op,zero,result);
+
+input [31:0] reg1;
+input [31:0] reg2;
+output [31:0] result;
+input [2:0] op;
+output zero;
+
+wire lessmsb,
+wire r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,r21,r22,r23,r24,r25,r26,r27,r28,r29,r30,r31;
+wire c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,c31;
+
+onebitalu bit0(reg2[0],reg1[0],lessmsb,op[2],op,r0,c0);
+onebitalu bit1(reg2[1],reg1[1],0,c0,op,r1,c1);
+onebitalu bit2(reg2[2],reg1[2],0,c1,op,r2,c2);
+onebitalu bit3(reg2[3],reg1[3],0,c2,op,r3,c3);
+onebitalu bit4(reg2[4],reg1[4],0,c3,op,r4,c4);
+onebitalu bit5(reg2[5],reg1[5],0,c4,op,r5,c5);
+onebitalu bit6(reg2[6],reg1[6],0,c5,op,r6,c6);
+onebitalu bit7(reg2[7],reg1[7],0,c6,op,r7,c7);
+onebitalu bit8(reg2[8],reg1[8],0,c7,op,r8,c8);
+onebitalu bit9(reg2[9],reg1[9],0,c8,op,r9,c9);
+onebitalu bit10(reg2[10],reg1[10],0,c9,op,r10,c10);
+onebitalu bit11(reg2[11],reg1[11],0,c10,op,r11,c11);
+onebitalu bit12(reg2[12],reg1[12],0,c11,op,r12,c12);
+onebitalu bit13(reg2[13],reg1[13],0,c12,op,r13,c13);
+onebitalu bit14(reg2[14],reg1[14],0,c13,op,r14,c14);
+onebitalu bit15(reg2[15],reg1[15],0,c14,op,r15,c15);
+onebitalu bit16(reg2[16],reg1[16],0,c15,op,r16,c16);
+onebitalu bit17(reg2[17],reg1[17],0,c16,op,r17,c17);
+onebitalu bit18(reg2[18],reg1[18],0,c17,op,r18,c18);
+onebitalu bit19(reg2[19],reg1[19],0,c18,op,r19,c19);
+onebitalu bit20(reg2[20],reg1[20],0,c19,op,r20,c20);
+onebitalu bit21(reg2[21],reg1[21],0,c20,op,r21,c21);
+onebitalu bit22(reg2[22],reg1[22],0,c21,op,r22,c22);
+onebitalu bit23(reg2[23],reg1[23],0,c22,op,r23,c23);
+onebitalu bit24(reg2[24],reg1[24],0,c23,op,r24,c24);
+onebitalu bit25(reg2[25],reg1[25],0,c24,op,r25,c25);
+onebitalu bit26(reg2[26],reg1[26],0,c25,op,r26,c26);
+onebitalu bit27(reg2[27],reg1[27],0,c26,op,r27,c27);
+onebitalu bit28(reg2[28],reg1[28],0,c27,op,r28,c28);
+onebitalu bit29(reg2[29],reg1[29],0,c28,op,r29,c29);
+onebitalu bit30(reg2[30],reg1[30],0,c29,op,r30,c30);
+onebitalu bit31(reg2[31],reg1[31],0,c30,op,r31,c31);

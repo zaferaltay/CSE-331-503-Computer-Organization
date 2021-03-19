@@ -1,0 +1,14 @@
+module InstructionMemory(ReadAddress,Instruction);
+
+
+input [31:0]ReadAddress;
+output reg[31:0] Instruction;
+
+reg [31:0] intructions [255:0];
+
+always@(*)begin 
+		instruction = instructions[program_counter];
+	end
+
+
+endmodule;

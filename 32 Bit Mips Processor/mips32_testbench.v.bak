@@ -1,0 +1,20 @@
+module mips32_testbench();
+  reg clock;
+	
+  mips_32 test(clock);
+  initial clock = 0;
+
+  initial begin 
+		$readmemb("C:/altera/13.1/workspace/hw4/registers.txt", test.register.registers);
+		$readmemb("C:/altera/13.1/workspace/hw4/datamemory.txt", test.memory);
+		$readmemb("C:/altera/13.1/workspace/hw4/instructionmemory.txt", test.instructions);
+		#50 clock=~clock; #50 clock=~clock;
+		#50 clock=~clock; #50 clock=~clock;
+		#50 clock=~clock; #50 clock=~clock;
+		#50 clock=~clock; #50 clock=~clock;
+		#50 clock=~clock; #50 clock=~clock;
+		#50 clock=~clock; #50 clock=~clock;
+		#50 clock=~clock; #50 clock=~clock;
+		
+  end
+endmodule

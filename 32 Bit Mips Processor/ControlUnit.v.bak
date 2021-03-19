@@ -1,0 +1,3 @@
+module ControlUnit(opcode,RegDest,SignExtend,Brn,Bne,lui,MemW,MemRead,MtoReg,AluOp1,AluOp0,AluSrc,RegWr,RegWr2,jmp,jal);
+
+endmodule

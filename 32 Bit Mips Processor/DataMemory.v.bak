@@ -1,0 +1,25 @@
+module DataMemory(adress,WriteData,MemWrite,MemRead,ReadData,clk);
+
+input [17:0] adress;
+input [31:0] WriteData;
+output [31:0] ReadData;
+input MemWrite,MemRead;
+
+reg [31:0] memory [255:0];
+
+
+	always @(*) begin
+		if(MemRead) begin
+			readData = memory[address];
+		end
+	end
+
+	always(@posedge clk) begin
+			if(MemWrite)begin
+				memory[adress]=WriteData;
+				$writememb("DataMemory.txt",memory);
+			end
+			
+			end
+			
+endmodule

@@ -1,0 +1,10 @@
+module shiftLeft2_32Bit(input1,output1);
+
+input [31:0]input1;
+output [31:0] output1;
+
+
+assign input1[31]=output1[29];
+
+
+endmodule;

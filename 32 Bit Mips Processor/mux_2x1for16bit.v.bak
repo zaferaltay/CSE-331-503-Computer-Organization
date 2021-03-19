@@ -1,0 +1,26 @@
+module mux_2x1for16bit(inp0,inp1,sel,out);
+
+input inp0;
+input inp1;
+input sel;
+
+output [15:0]out;
+
+mux_2x1 bit0(out[0],inp0,inp1,sel);
+mux_2x1 bit1(out[1],inp0,inp1,sel);
+mux_2x1 bit2(out[2],inp0,inp1,sel);
+mux_2x1 bit3(out[3],inp0,inp1,sel);
+mux_2x1 bit4(out[4],inp0,inp1,sel);
+mux_2x1 bit5(out[5],inp0,inp1,sel);
+mux_2x1 bit6(out[6],inp0,inp1,sel);
+mux_2x1 bit7(out[7],inp0,inp1,sel);
+mux_2x1 bit8(out[8],inp0,inp1,sel);
+mux_2x1 bit9(out[9],inp0,inp1,sel);
+mux_2x1 bit10(out[10],inp0,inp1,sel);
+mux_2x1 bit11(out[11],inp0,inp1,sel);
+mux_2x1 bit12(out[12],inp0,inp1,sel);
+mux_2x1 bit13(out[13],inp0,inp1,sel);
+mux_2x1 bit14(out[14],inp0,inp1,sel);
+mux_2x1 bit15(out[15],inp0,inp1,sel);
+
+endmodule

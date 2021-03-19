@@ -1,0 +1,13 @@
+module thirtyTwoBitFullAdder(inpa,inpb,out);
+
+input [31:0]inpa;
+input [31:0]inpb;
+output [31:0]out;
+
+
+onebitalu bit0(inpa[0],inpb[0],0,cout0,out[0]);
+onebitalu bit1(inpa[1],inpb[1],cout0,cout1,out[0]);
+
+
+
+endmodule

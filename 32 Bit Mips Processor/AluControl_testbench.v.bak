@@ -1,0 +1,21 @@
+module AluControl_testbench();
+
+reg [1:0] AluOp;
+reg [5:0] FunctionField;
+
+wire [2:0] AluControl;
+
+
+AluControl test(AluOp,FunctionField,AluControl);
+
+initial begin
+
+
+
+end
+initial #20000 $finish;
+
+initial begin
+ $monitor()
+end
+endmodule

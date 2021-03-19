@@ -1,0 +1,3 @@
+module InstructionMemory_testbench();
+
+endmodule

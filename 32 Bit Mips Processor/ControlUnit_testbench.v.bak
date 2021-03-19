@@ -1,0 +1,15 @@
+module ControlUnit_testbench();
+
+reg [5:0]opcode;
+wire RegDest,SignExtend,Brn,Bne,lui,MemW,MemRead,MtoReg,AluOp1,AluOp0,AluSrc,RegWr,RegWr2,jmp,jal;
+
+ControlUnit test(opcode,RegDest,SignExtend,Brn,Bne,lui,MemW,MemRead,MtoReg,AluOp1,AluOp0,AluSrc,RegWr,RegWr2,jmp,jal);
+
+initial begin
+opcode = 6'b;
+
+
+
+end
+
+endmodule

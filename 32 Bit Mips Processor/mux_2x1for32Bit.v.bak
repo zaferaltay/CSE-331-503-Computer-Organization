@@ -1,0 +1,9 @@
+module mux_2x1for32Bit(inp0,inp1,select,out);
+
+input [31:0]inp0;
+input [31:0]inp1;
+input select;
+output [31:0] out;
+
+
+mux_2x1 bit0(inp0[0],inp1[0],select,out[0]);

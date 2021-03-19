@@ -1,0 +1,4 @@
+module mips32(clk);
+
+
+endmodule

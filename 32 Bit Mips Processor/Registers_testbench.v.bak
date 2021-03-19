@@ -1,0 +1,31 @@
+//test cases for mips_registers module.
+`define DELAY 20
+module Registers_testbench(); 
+reg RegWrite,RegWrite2,clk;	
+reg [31:0] WriteData1;
+reg [31:0] WriteData2;
+reg [4:0] ReadReg1;
+reg [4:0] ReadReg2;
+reg [4:0] WriteReg1;
+reg [4:0] WriteReg2;
+reg [4:0] read_reg_2;
+wire [31:0] ReadData1;
+wire [31:0] ReadData2;
+
+Registers test ( RegWrite,ReadReg1,ReadReg2,WriteReg1,WriteData1,RegWrite2,WriteReg2,WriteData2,ReadData1,ReadData2,clk );
+$readmemb("registers.txt", test.registers);
+initial begin
+ReadReg1= 5'b00000 ; ReadReg2= 5'b00001; WriteReg1=5'b00010 ; RegWrite=1'b1; clk=1'b1; write_data= 32'b10001110111111011111101111110111;
+RegWrite2=1'b0;
+#`DELAY;
+
+
+
+end
+ 
+initial
+begin
+$monitor(" ReadReg1=%5b , ReadReg2=%5b , ReadData1=%32b , ReadData2=%32b ,WriteData=%32b , WriteReg1 =%5b ",ReadReg1,ReadReg2, ReadData1,ReadData2,WriteData,WriteReg1);
+end
+ 
+endmodule

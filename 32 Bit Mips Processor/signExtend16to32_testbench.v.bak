@@ -1,0 +1,24 @@
+module signExtend16to32_testbench();
+
+reg [15:0]inp1;
+wire [31:0]out;
+
+mux_2x1for16bit test(inp1,out);
+
+initial begin
+//Desined to select always 1.
+inp1 = 16'b0111101110010101;
+
+#100 
+#100
+inp1 = 16'b1111101110010101;
+
+end
+initial #500 $finish;
+initial begin
+	$monitor("Input Bits: %b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b and Result: %b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b%b",
+		inp1[15],inp1[14],inp1[13],inp1[12],inp1[11],inp1[10],inp1[9],inp1[8],inp1[7],inp1[6],inp1[5],inp1[4],inp1[3],inp1[2],inp1[1],inp1[0],
+		out[31],out[30],out[29],out[28],out[27],out[26],out[25],out[24],out[23],out[22],out[21],out[20],out[19],out[18],out[17],out[16],
+		out[15],out[14],out[13],out[12],out[11],out[10],out[9],out[8],out[7],out[6],out[5],out[4],out[3],out[2],out[1],out[0]);
+end
+endmodule

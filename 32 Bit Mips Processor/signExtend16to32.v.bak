@@ -1,0 +1,10 @@
+module signExtend16to32(inp1,out1);
+
+input [15:0]inp1;
+output [31:0]out1;
+
+reg extend1;
+reg extend0;
+
+extend1=16'b1111111111111111;
+extend0=16'b0000000000000000;
